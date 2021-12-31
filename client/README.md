@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with Stock Tracker
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,6 +6,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install`
+
+Make sure to install if this is the first time pulling the repository.
 ### `npm start`
 
 Runs the app in the development mode.\
