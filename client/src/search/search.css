@@ -1,0 +1,47 @@
+
+#searchDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px 0 0 5px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+#title {
+    font-size: 1rem;
+    font-weight: 400;
+}
+#description {
+    font-size: .8rem;
+    margin-top: 5px;
+}
+#stockSearch {
+    width: 15%;
+    height: 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 2px;
+    padding: .5rem;
+    box-shadow: 1px 1px 1px 1px #e6e6e6;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+}
+#keywordList {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 15%;
+    margin: 2px 0 0 10px;;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 1px 1px 1px 1px #e6e6e6;
+}
+#symbol {
+    cursor: pointer;
+    font-size: 12px;
+}
