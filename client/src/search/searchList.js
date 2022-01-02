@@ -1,4 +1,5 @@
 import React from 'react';
+import { apikey } from '../utility/env';
 import './search.css';
 
 const SearchList = (props) => {
@@ -13,7 +14,7 @@ const SearchList = (props) => {
     if(selectedStocks.length === 3) {
       return openAlert('3 stocks have been selected. Remove on to update the view')
     } else {
-      fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${stock['1. symbol']}&apikey=98HMVQD0UF7YV23S`)
+      fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${stock['1. symbol']}&apikey=${apikey}`)
         .then(res => res.json())
         .then(
           (result) => {
@@ -45,7 +46,7 @@ const SearchList = (props) => {
         params.setShowList(false);
     }
   }
-  if(params.showList && params.list.length > 0) {
+  if(params.showList && params?.list?.length > 0) {
     return (
         <div id="keywordList">
             {params.list.map((el, idx) => {

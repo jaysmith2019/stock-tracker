@@ -72,3 +72,20 @@
     text-align: center;
     margin-top: 20%;
 }
+
+@media only screen and (max-width: 1400px) {
+    #close {
+        margin-left: 85%;
+    }
+    #closeText {
+        margin-left: 82%;
+    }
+}
+@media only screen and (max-width: 765px) {
+    #close {
+        margin-left: 75%;
+    }
+    #closeText {
+        margin-left: 72%;
+    }
+}

@@ -9,7 +9,7 @@ const Alert = (props) => {
   if(open) {
     return (
         <div id="alert">
-          <span>{message}</span><span id="closeButton" onClick={close}>&#x2715;</span>
+          <span id="message">{message}</span><span id="closeButton" onClick={close}>&#x2715;</span>
         </div>
       )
   }

@@ -1,5 +1,6 @@
 import React, { useState} from 'react';
 import SearchList from './searchList';
+import { apikey } from '../utility/env';
 import './search.css';
 
 const Search = (props) => {
@@ -9,7 +10,7 @@ const Search = (props) => {
   const [list, setList] = useState();
   const [showList, setShowList] = useState(false);
   const description = 'Enter up to 3 stocks to compare the current stock prices';
-  
+  const title = 'Stock Comparison';
   const params = {
     list: list,
     showList: showList,
@@ -25,29 +26,32 @@ const Search = (props) => {
     clearTimeout(timer);
     const inputTimer = setTimeout(() => {
       if(val.length > 0) {
-        fetch(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${userInput}&apikey=98HMVQD0UF7YV23S`)
+        fetch(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${userInput}&apikey=${apikey}`)
         .then(res => res.json())
         .then(
           (result) => {
+            if(result.Note) {
+              setMessage('Api rate limit reached')
+              setOpen(true);
+            }
             setList(result.bestMatches)
-            setShowList(true)
+            setShowList(true);
           },
           (error) => {
             setMessage('There was an error fetching stocks')
-            setOpen(true)
+            setOpen(true);
           }
         )
       } else {
-        setShowList(false)
+        setShowList(false);
       }
-      
     }, 500);
-    setTimer(inputTimer)
+    setTimer(inputTimer);
   }
   return (
     <div id="searchDiv">
      <div className="row">
-        <span id="title">Stock Comparison</span>
+        <span id="title">{title}</span>
      </div>
      <div className="row">
          <span id="description">{description}</span>
