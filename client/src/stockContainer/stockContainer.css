@@ -1,0 +1,91 @@
+.container {
+    position: fixed;
+    z-index: 300;
+    margin-top: 5px;
+    width: 100%;
+}
+.stock-row {
+    display: flex;
+    flex-direction: row;
+}
+.stock-container {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height:100vh;
+}
+.remove-column {
+    display: flex;
+    flex-direction: column;
+}
+#stockTitle {
+    text-align: center;
+}
+.price-section {
+    width: 40%;
+    margin-top: 8px;
+    margin-left: 45px;
+    line-height: 8px;
+}
+.stats-section {
+    margin-top: 5%;
+    margin-left: 42%;
+
+}
+.stat-price {
+    margin-left: 25%;
+}
+.icon-section {
+    width: 1%;
+    margin-left: 41%;
+}
+.icon {
+    font-size: 60px;
+}
+.red {
+    color: #e31c3d;
+}
+.green {
+    color: #2e8540;
+}
+.percent {
+    margin-left: 5px;
+}
+#currentPrice {
+    font-weight: 400;
+}
+#close {
+   margin-left: 92%; 
+   cursor: pointer;
+   font-size: 14px;
+   color: red;
+}
+#closeText {
+    margin-left: 90%;
+    font-size: 12px;
+    color: red;
+}
+.column {
+    width: 100%;
+}
+#noData {
+    text-align: center;
+    margin-top: 20%;
+}
+
+@media only screen and (max-width: 1400px) {
+    #close {
+        margin-left: 85%;
+    }
+    #closeText {
+        margin-left: 82%;
+    }
+}
+@media only screen and (max-width: 765px) {
+    #close {
+        margin-left: 75%;
+    }
+    #closeText {
+        margin-left: 72%;
+    }
+}
